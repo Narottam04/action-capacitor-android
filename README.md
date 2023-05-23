@@ -1,5 +1,7 @@
 ## Instructions for using this GitHub Action
 
+### Step 0: Clone this action to your repo
+
 ### Step 1: Change Branch Name
 
 Change branch name in .github → workflows → create-android.yml
