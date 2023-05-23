@@ -2,11 +2,18 @@
 
 ### Step 0: Clone this action to your repo
 
-### Step 1: Change Branch Name
+### Step 1: Install Capcitor Dependencies and Change Branch Name in action
 
-Change branch name in .github → workflows → create-android.yml
+- In your frontend folder first install dependencies for converting web app to android app
 
-********************************************Default is Master********************************************
+```bash
+npm i @capacitor/core
+npm i -D @capacitor/cli
+npm i @capacitor/android
+```
+
+- Change branch name in .github → workflows → create-android.yml
+- ********************************************Default is Master********************************************
 
 ```yaml
 on:
