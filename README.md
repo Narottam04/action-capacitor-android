@@ -1,3 +1,10 @@
+![Banner](https://res.cloudinary.com/https-webdrip-in/image/upload/v1684903509/hackathon-github_wa82y1.png)
+
+## Description
+
+action-capacitor-android offers a streamlined solution for converting your web apps into production Android apps. With custom GitHub action, developers can automate the conversion process, generating signed .aab file for deployment to play store and .apk files for testing. This automation simplifies the deployment workflow for open source projects or personal projects that would like to have a native app for their web apps, empowering developers to effortlessly transform their web apps into fully functional Android apps, accelerating their deployment process and developer experience.
+
+
 ## Instructions for using this GitHub Action
 
 ### Step 0: Clone this action to your repo
@@ -103,7 +110,26 @@ Navigate to settings → Secrets and actions → actions → New Repository Secr
 - Create a repository secret named `RELEASE_KEYSTORE` and paste the content of b64 file we generated. Please don’t add first line that mentions **BEGIN CERTIFICATE only add the content of the file.**
 - Create second secret named `RELEASE_KEYSTORE_PASSWORD` where you need to add the password you used to create release keystore in previous step.
 - Create a third secret named `ACCESS_TOKEN` this is needed to output the files in release.
-    - Create a personal access token by using this guide [https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+    - Create a personal access token by using this guide [https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token]
+    - (https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
    
    
   ![actions secret](https://res.cloudinary.com/https-webdrip-in/image/upload/v1684861742/action-capacitor-secrets_s3kn47.png)
+  
+  
+ ## Demo Repository and App
+ 
+Web App: https://pokecards.pages.dev/
+
+Android App Release: https://github.com/Narottam04/PokeCards/releases/tag/2023-05-23-17_45_41%2B0000
+
+
+**Demo of web app converted to android app using github actions**
+
+The demo app is created using eleventy js(11ty) and converted to android app using action-capacitor-android. Download the app from github release mentioned above in app link.
+
+
+
+https://github.com/Narottam04/action-capacitor-android/assets/74066540/d1943e0e-ee30-4ec3-bf30-5232a9fc39ef
+
+
