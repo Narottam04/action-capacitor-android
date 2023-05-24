@@ -48,7 +48,7 @@ jobs:
       
       # TODO: Check for folder structure in README for generating splash screen 
       - name: Generate icons and splash screen to android folder 
-        run:  if [ -d "./resources" ]; then npm install @capacitor/assets --save-dev && npx capacitor-assets generate; fi
+        run:  if [ -d "./resources" ]; then npm install @capacitor/assets --save-dev && npx capacitor-assets generate --android; fi
         
       - name: Build app bundle
         run: cd android && ./gradlew bundle && ./gradlew assembleDebug
@@ -63,13 +63,6 @@ jobs:
 
       - name: Check folder content of android output
         run: ls ./android/app/build/outputs/bundle/release
-
-      # - name: Upload release bundle
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: app-release
-      #     path: ./android/app/build/outputs/bundle/release/app-release-signed.aab
-      #     retention-days: 60
 
       - name: Set Tag
         id: current-datetime
