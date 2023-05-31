@@ -60,6 +60,8 @@ jobs:
 
       - name: Sign dev build
         run: jarsigner -keystore android/release.decrypted.jks -storepass "${{ secrets.RELEASE_KEYSTORE_PASSWORD }}" -signedjar ./android/app/build/outputs/bundle/release/app-release-signed.aab ./android/app/build/outputs/bundle/release/app-release.aab release
+        # Uncomment below and comment above to use v2 sign which is a requirement for andorid 11+
+        #run: apksigner sign --ks android/release.decrypted.jks --ks-pass "pass:${{ secrets.RELEASE_KEYSTORE_PASSWORD }}" --in ./android/app/build/outputs/bundle/release/app-release.aab --out ./android/app/build/outputs/bundle/release/app-release-signed.aab
 
       - name: Check folder content of android output
         run: ls ./android/app/build/outputs/bundle/release
