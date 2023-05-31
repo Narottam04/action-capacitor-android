@@ -1,3 +1,6 @@
 name: capacitor-android-action
-descritpion: Convert any website to production ready android app 🚀
+descritpion: Convert any website to android app🚀
 author: Narottam Sahu
+branding:
+  icon: 'airplay'
+  color: 'blue'
